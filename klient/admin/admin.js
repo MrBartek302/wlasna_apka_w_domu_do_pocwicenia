@@ -3,7 +3,6 @@ var json = []
 
 async function start(){
     await pobierz()
-    await uzytkownicy()
     tableCreate()
 }
 start()
@@ -13,17 +12,6 @@ async function pobierz(){
     json = await data.json()
     console.log(json)
 }
-
-
-
-async function uzytkownicy(){
-    for(var i=0; i<=json.length-1; i++){
-        var imiet = json[i].imie
-        var nazwiskot = json[i].nazwisko
-        tablica.push({imie1:imiet, nazwisko1:nazwiskot})
-    }
-}
-
 
 function tableCreate() {
     var div = document.getElementById("body");
@@ -44,14 +32,14 @@ function tableCreate() {
     tbl.appendChild(thead);
     
     var tbody = document.createElement('tbody');
-    for (var i = 0; i < tablica.length; i++) {
+    for (var i = 0; i < json.length; i++) {
       var tr = document.createElement('tr');
       var td1 = document.createElement('td');
       td1.setAttribute("id", "td1")
       var td2 = document.createElement('td');
       td2.setAttribute("id", "td2")
-      td1.textContent = tablica[i].imie1;
-      td2.textContent = tablica[i].nazwisko1;
+      td1.textContent = json[i].imie;
+      td2.textContent = json[i].nazwisko;
       tr.appendChild(td1);
       tr.appendChild(td2);
       tbody.appendChild(tr);
