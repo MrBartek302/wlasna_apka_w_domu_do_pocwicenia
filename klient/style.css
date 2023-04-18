@@ -1,0 +1,73 @@
+body{
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 100vh;
+    grid-template-areas: 
+    "lewo prawo";
+}
+
+#lewo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: lewo;
+    background-color:#343a40;
+    border-right: solid white 3px;
+}
+
+#miejsce{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    height: 240px;
+    gap: 10px;
+    border: solid white 5px;
+    border-radius: 20px;
+}
+
+input{
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#dodaj{
+    width: 100px;
+    height: 25px;
+    border:  solid white 3px;
+    border-radius: 20px;
+    background-color: violet;
+}
+
+#prawo{
+    display: flex;
+    align-items: baseline;
+    justify-content:right;
+    grid-area: prawo;
+    background-color:#495057;
+}
+
+#adminbtn{
+    border: solid white 3px;
+    border-radius: 50px;
+    background-color: red;
+    width: 110px;
+    height: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td, th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #ddd;
+  }
+  
